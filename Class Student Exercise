@@ -1,0 +1,70 @@
+
+
+#include <iostream>
+using namespace std;
+class Student {
+public:
+    Student(string fName, string lName, int ssn, string city, string birthDate) //Constructor
+    {
+        setfName(fName);
+        setlName(lName);
+        setSSN(ssn);
+        setCity(city);
+        setbirthDate(birthDate);
+
+    }
+    // Displays student information
+    void displayStudent() {
+        cout << "First name: " << fName << " Last name: " << lName << " SSN: " << ssn << " City: " << city << " Date of birth: "
+            << birthDate << endl;
+    }
+    void setfName(string fName) {
+        this->fName = fName;
+    }
+    string getfName() {
+        return this->fName;
+    }
+    void setlName(string lName) {
+        this->lName = lName;
+    }
+    string getlName() {
+        return this->lName;
+    }
+    void setSSN(int ssn) {
+        this->ssn = ssn;
+    }
+    int getSSN() {
+        return this->ssn;
+    }
+    void setCity(string city) {
+        this->city = city;
+    }
+    string getCity() {
+        return this->city;
+    }
+    void setbirthDate(string birthDate) {
+        this->birthDate = birthDate;
+    }
+    string getbirthDate() {
+        return this->birthDate;
+    }
+private:
+    string fName;
+    string lName;
+    int ssn;
+    string city;
+    string birthDate;
+
+
+
+};
+int main()
+{
+    Student studentOne("Roberto", "Kazakov", 8628104848, "Sofia", "10.28.1986");
+    Student studentTwo("Alexander", "Karastoyanov", 9999999999, "Sofia", "99.99.9999");
+    studentOne.displayStudent();
+    studentTwo.displayStudent();
+    return 0;
+
+}
+
